@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Terminos y Condiciones de SISTEPARD — Sistema Electoral de Partidos RD. Conoce las reglas de uso de la plataforma.">
-<title>Terminos y Condiciones — SISTEPARD</title>
+<meta name="description" content="Terminos y Condiciones de SISTEPARD - Sistema Electoral de Partidos RD.">
+<title>Terminos y Condiciones - SISTEPARD</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,60 +13,71 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-.header{background:linear-gradient(135deg,#0a1128,#1a365d);padding:80px 0 64px;color:#fff;text-align:center}
-.header-inner{max-width:720px;margin:0 auto;padding:0 24px}
-.header-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(79,125,245,.15);border:1px solid rgba(79,125,245,.3);margin-bottom:24px}
-.header-badge span{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
-.header h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
-.header p{font-size:16px;color:rgba(255,255,255,.5);max-width:480px;margin:0 auto}
-.header-date{margin-top:16px;font-size:13px;color:rgba(255,255,255,.35)}
-.content{max-width:720px;margin:0 auto;padding:48px 24px 80px}
-.content h2{font-size:22px;font-weight:700;margin:48px 0 16px;color:var(--primary)}
-.content h2:first-child{margin-top:0}
-.content p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:16px}
-.content ul{margin:0 0 16px 20px;color:var(--muted);font-size:15px;line-height:1.8}
-.content ul li{margin-bottom:6px}
-.content strong{color:var(--text);font-weight:600}
-.content .legal-ref{display:inline-block;background:rgba(79,125,245,.08);border:1px solid rgba(79,125,245,.15);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:600;color:var(--accent);margin-left:4px}
-.back-link{display:inline-flex;align-items:center;gap:8px;margin-top:40px;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:13px;font-weight:600;transition:all .3s}
-.back-link:hover{box-shadow:0 4px 16px rgba(79,125,245,.3);transform:translateY(-1px)}
-.back-link svg{width:16px;height:16px}
-.footer{background:var(--primary);color:#fff;padding:40px 0 24px;margin-top:80px}
-.footer-inner{max-width:720px;margin:0 auto;padding:0 24px;text-align:center}
-.footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
-.footer-brand-icon{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
-.footer-brand-icon svg{width:18px;height:18px;color:#fff}
-.footer-brand span{font-weight:700;font-size:14px}
-.footer p{font-size:13px;color:rgba(255,255,255,.4)}
-.footer-links{display:flex;justify-content:center;gap:24px;margin-top:16px}
-.footer-links a{font-size:12px;color:rgba(255,255,255,.35);transition:color .3s}
-.footer-links a:hover{color:rgba(255,255,255,.7)}
-@media(max-width:768px){
-.header{padding:64px 0 48px}
-.content{padding:32px 20px 64px}
-}
+.legal-nav{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,#0a1128,#1a365d);box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.legal-nav-inner{max-width:720px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:56px}
+.legal-nav-brand{display:flex;align-items:center;gap:10px}
+.legal-nav-icon{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.legal-nav-icon svg{width:18px;height:18px;color:#fff}
+.legal-nav-name{font-weight:700;font-size:14px;color:#fff;letter-spacing:-.02em}
+.legal-nav-sep{color:rgba(255,255,255,.25);margin:0 2px}
+.legal-nav-sub{font-weight:500;font-size:13px;color:rgba(255,255,255,.5)}
+.legal-nav-back{font-size:12px;font-weight:600;color:rgba(255,255,255,.5);display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.12);transition:all .2s}
+.legal-nav-back:hover{color:#fff;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.06)}
+.legal-nav-back svg{width:14px;height:14px}
+.legal-content{max-width:640px;margin:0 auto;padding:56px 24px 80px}
+.legal-content h1{font-size:20px;font-weight:700;color:var(--text);margin-bottom:4px}
+.legal-content .doc-date{font-size:12px;color:var(--muted);margin-bottom:40px}
+.legal-content h2{font-size:16px;font-weight:700;margin:40px 0 12px;color:var(--text);letter-spacing:-.01em}
+.legal-content h2:first-of-type{margin-top:0}
+.legal-content p{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:14px}
+.legal-content ul{margin:0 0 14px 18px;color:var(--muted);font-size:14px;line-height:1.75}
+.legal-content ul li{margin-bottom:4px}
+.legal-content strong{color:var(--text);font-weight:600}
+.legal-content .ref{display:inline-block;background:rgba(79,125,245,.08);border:1px solid rgba(79,125,245,.15);border-radius:5px;padding:1px 7px;font-size:11px;font-weight:600;color:var(--accent);margin-left:4px;vertical-align:middle}
+.legal-doc-footer{border-top:1px solid var(--border);margin-top:48px;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.legal-doc-footer span{font-size:12px;color:var(--muted)}
+.legal-doc-footer-links{display:flex;gap:20px}
+.legal-doc-footer-links a{font-size:12px;color:var(--muted);transition:color .2s}
+.legal-doc-footer-links a:hover{color:var(--accent)}
+.legal-site-footer{background:var(--primary);color:#fff;padding:40px 0 24px}
+.legal-site-footer-inner{max-width:720px;margin:0 auto;padding:0 24px}
+.legal-site-footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:24px}
+.legal-site-footer-brand{display:flex;align-items:center;gap:10px}
+.legal-site-footer-brand-icon{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
+.legal-site-footer-brand-icon svg{width:16px;height:16px;color:#fff}
+.legal-site-footer-brand span{font-weight:700;font-size:13px}
+.legal-site-footer-nav{display:flex;gap:24px}
+.legal-site-footer-nav a{font-size:12px;color:rgba(255,255,255,.4);transition:color .2s}
+.legal-site-footer-nav a:hover{color:rgba(255,255,255,.8)}
+.legal-site-footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;text-align:center}
+.legal-site-footer-bottom p{font-size:11px;color:rgba(255,255,255,.25)}
+@media(max-width:768px){.legal-content{padding:40px 20px 64px}.legal-site-footer-top{flex-direction:column;align-items:center;text-align:center}.legal-site-footer-nav{flex-wrap:wrap;justify-content:center}}
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="header-inner">
-    <div class="header-badge"><span>Terminos</span></div>
-    <h1>Terminos y Condiciones</h1>
-    <p>Conoce las reglas y condiciones que rigen el uso de la plataforma SISTEPARD.</p>
-    <div class="header-date">Ultima actualizacion: 21 de agosto de 2026</div>
+<nav class="legal-nav">
+  <div class="legal-nav-inner">
+    <div class="legal-nav-brand">
+      <div class="legal-nav-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <span class="legal-nav-name">SISTEPARD</span>
+      <span class="legal-nav-sep">&middot;</span>
+      <span class="legal-nav-sub">Terminos</span>
+    </div>
+    <a href="index.html" class="legal-nav-back"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg> Inicio</a>
   </div>
-</header>
+</nav>
 
-<main class="content">
+<main class="legal-content">
+
+  <h1>Terminos y Condiciones</h1>
+  <div class="doc-date">Ultima actualizacion: 21 de agosto de 2026</div>
 
   <h2>1. Aceptacion de los terminos</h2>
   <p>Al acceder, registrarte o utilizar la plataforma SISTEPARD, aceptas de forma voluntaria y sin reservas estos Terminos y Condiciones. Si no estas de acuerdo con alguno de estos terminos, debes abstenerte de utilizar la plataforma.</p>
 
-  <h2>2. Licencia de uso
-    <span class="legal-ref">MIT License</span>
-  </h2>
-  <p>SISTEPARD es un software de codigo abierto distribuido bajo la <strong> Licencia MIT</strong>. Esto significa que:</p>
+  <h2>2. Licencia de uso <span class="ref">MIT License</span></h2>
+  <p>SISTEPARD es un software de codigo abierto distribuido bajo la <strong>Licencia MIT</strong>. Esto significa que:</p>
   <ul>
     <li>El codigo fuente puede ser utilizado, copiado, modificado, fusionado, publicado, distribuido, sublicenciado y/o vendido libremente.</li>
     <li>El software se proporciona "tal cual", sin garantia de ningun tipo.</li>
@@ -89,7 +100,7 @@ a{text-decoration:none;color:inherit}
   <p>SISTEPARD opera bajo un modelo <strong>multi-tenant</strong>, donde cada partido politico tiene su propia instancia aislada. Esto significa que:</p>
   <ul>
     <li><strong>Datos separados:</strong> Cada partido tiene su propia base de datos, configuracion y usuarios. No hay comparticion de datos entre partidos.</li>
-    <li><strong>Configuracion independiente:</strong> Cada instancia tiene su propio archivo de configuracion (config.json) con colores, logo, y legally localizables.</li>
+    <li><strong>Configuracion independiente:</strong> Cada instancia tiene su propio archivo de configuracion (config.json) con colores, logo y contenido legal localizable.</li>
     <li><strong>Aislamiento de seguridad:</strong> Las politicas Row Level Security (RLS) garantizan que cada usuario solo pueda acceder a los datos de su propio partido.</li>
     <li><strong>Dominio compartido:</strong> Todas las instancias operan bajo el mismo dominio (sistepard.com) pero con configuracion aislada.</li>
   </ul>
@@ -120,7 +131,7 @@ a{text-decoration:none;color:inherit}
     <li>No participar en fraude electoral, soborno o cualquier conducta que comprometa la integridad del proceso.</li>
     <li>No intentar acceder a datos de otros usuarios sin autorizacion.</li>
     <li>No utilizar la plataforma para fines distintos a los establecidos por SISTEPARD.</li>
-    <li>No intentar evadir las measures de seguridad de la plataforma.</li>
+    <li>No intentar evadir las medidas de seguridad de la plataforma.</li>
   </ul>
   <p>El incumplimiento de estas condiciones podra resultar en la suspension o eliminacion definitiva de tu cuenta.</p>
 
@@ -167,32 +178,36 @@ a{text-decoration:none;color:inherit}
   <p>Si tienes preguntas, solicitudes o inquietudes sobre estos Terminos y Condiciones, puedes contactarnos a traves de:</p>
   <p><strong>Email:</strong> <a href="mailto:info@partidoprueba.do" style="color:var(--accent)" class="legal-var-link" data-key="responsableEmail">info@partidoprueba.do</a></p>
 
-  <div style="background:rgba(79,125,245,.06);border:1px solid rgba(79,125,245,.15);border-radius:12px;padding:20px;margin-top:40px">
-    <p style="font-size:13px;color:var(--muted);margin:0"><strong>Disclaimer:</strong> Este documento ha sido generado como modelo base conforme a la Ley No. 172-13 sobre Proteccion de Datos de Caracter Personal y la Ley No. 53-07 sobre Crimenes y Delitos de Alta Tecnologia de Republica Dominicana. Se recomienda que sea revisado por un abogado colegiado antes de su publicacion formal.</p>
+  <div style="background:rgba(79,125,245,.06);border:1px solid rgba(79,125,245,.12);border-radius:8px;padding:16px;margin-top:32px">
+    <p style="font-size:12px;color:var(--muted);margin:0;line-height:1.6"><strong>Disclaimer:</strong> Este documento ha sido generado como modelo base conforme a la Ley No. 172-13 sobre Proteccion de Datos de Caracter Personal y la Ley No. 53-07 sobre Crimenes y Delitos de Alta Tecnologia de Republica Dominicana. Se recomienda que sea revisado por un abogado colegiado antes de su publicacion formal.</p>
   </div>
 
-  <a href="index.html" class="back-link">
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
-    Volver al inicio
-  </a>
+  <div class="legal-doc-footer">
+    <span>&copy; 2026 SISTEPARD</span>
+    <div class="legal-doc-footer-links">
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="terminos.html">Terminos</a>
+    </div>
+  </div>
 
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-brand-icon">
-        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+<footer class="legal-site-footer">
+  <div class="legal-site-footer-inner">
+    <div class="legal-site-footer-top">
+      <div class="legal-site-footer-brand">
+        <div class="legal-site-footer-brand-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <span>SISTEPARD</span>
       </div>
-      <span>SISTEPARD</span>
+      <div class="legal-site-footer-nav">
+        <a href="privacidad.html">Privacidad</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="terminos.html">Terminos</a>
+        <a href="index.html">Inicio</a>
+      </div>
     </div>
-    <p>&copy; 2026 SISTEPARD. Todos los derechos reservados.</p>
-    <div class="footer-links">
-      <a href="privacidad.html">Politica de Privacidad</a>
-      <a href="cookies.html">Politica de Cookies</a>
-      <a href="terminos.html">Terminos y Condiciones</a>
-      <a href="index.html">Inicio</a>
-    </div>
+    <div class="legal-site-footer-bottom"><p>&copy; 2026 SISTEPARD. Todos los derechos reservados.</p></div>
   </div>
 </footer>
 
