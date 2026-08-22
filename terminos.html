@@ -26,6 +26,8 @@ a{text-decoration:none;color:inherit}
 .content p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:16px}
 .content ul{margin:0 0 16px 20px;color:var(--muted);font-size:15px;line-height:1.8}
 .content ul li{margin-bottom:6px}
+.content strong{color:var(--text);font-weight:600}
+.content .legal-ref{display:inline-block;background:rgba(79,125,245,.08);border:1px solid rgba(79,125,245,.15);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:600;color:var(--accent);margin-left:4px}
 .back-link{display:inline-flex;align-items:center;gap:8px;margin-top:40px;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:13px;font-weight:600;transition:all .3s}
 .back-link:hover{box-shadow:0 4px 16px rgba(79,125,245,.3);transform:translateY(-1px)}
 .back-link svg{width:16px;height:16px}
@@ -59,9 +61,20 @@ a{text-decoration:none;color:inherit}
 <main class="content">
 
   <h2>1. Aceptacion de los terminos</h2>
-  <p>Al acceder, registrarte o utilizar la plataforma SISTEPARD, aceptas de forma voluntaria y sin reservas estos Terminos y Condiciones. Si no estás de acuerdo con alguno de estos terminos, debes abstenerse de utilizar la plataforma.</p>
+  <p>Al acceder, registrarte o utilizar la plataforma SISTEPARD, aceptas de forma voluntaria y sin reservas estos Terminos y Condiciones. Si no estas de acuerdo con alguno de estos terminos, debes abstenerte de utilizar la plataforma.</p>
 
-  <h2>2. Descripcion del servicio</h2>
+  <h2>2. Licencia de uso
+    <span class="legal-ref">MIT License</span>
+  </h2>
+  <p>SISTEPARD es un software de codigo abierto distribuido bajo la <strong> Licencia MIT</strong>. Esto significa que:</p>
+  <ul>
+    <li>El codigo fuente puede ser utilizado, copiado, modificado, fusionado, publicado, distribuido, sublicenciado y/o vendido libremente.</li>
+    <li>El software se proporciona "tal cual", sin garantia de ningun tipo.</li>
+    <li>El autor original no es responsable por reclamaciones, danos o cualquier responsabilidad derivada del uso del software.</li>
+  </ul>
+  <p>La licencia MIT completa esta disponible en el repositorio del proyecto en GitHub.</p>
+
+  <h2>3. Descripcion del servicio</h2>
   <p>SISTEPARD es una plataforma electoral digital disenada para la gestion interna de partidos politicos en Republica Dominicana. El servicio incluye:</p>
   <ul>
     <li>Gestion del padron de militantes y dirigentes.</li>
@@ -69,9 +82,19 @@ a{text-decoration:none;color:inherit}
     <li>Generacion y verificacion de actas electronicas con codigo QR.</li>
     <li>Herramientas para planificar y ejecutar elecciones internas.</li>
     <li>Dashboard en tiempo real con resultados y reportes.</li>
+    <li>Gestion documental: constituciones, estatutos, reglamentos, planes operativos y financieros.</li>
   </ul>
 
-  <h2>3. Elegibilidad</h2>
+  <h2>4. Arquitectura multi-tenant</h2>
+  <p>SISTEPARD opera bajo un modelo <strong>multi-tenant</strong>, donde cada partido politico tiene su propia instancia aislada. Esto significa que:</p>
+  <ul>
+    <li><strong>Datos separados:</strong> Cada partido tiene su propia base de datos, configuracion y usuarios. No hay comparticion de datos entre partidos.</li>
+    <li><strong>Configuracion independiente:</strong> Cada instancia tiene su propio archivo de configuracion (config.json) con colores, logo, y legally localizables.</li>
+    <li><strong>Aislamiento de seguridad:</strong> Las politicas Row Level Security (RLS) garantizan que cada usuario solo pueda acceder a los datos de su propio partido.</li>
+    <li><strong>Dominio compartido:</strong> Todas las instancias operan bajo el mismo dominio (sistepard.com) pero con configuracion aislada.</li>
+  </ul>
+
+  <h2>5. Elegibilidad</h2>
   <p>Para utilizar SISTEPARD, debes cumplir con los siguientes requisitos:</p>
   <ul>
     <li>Ser mayor de 18 anos de edad.</li>
@@ -80,7 +103,7 @@ a{text-decoration:none;color:inherit}
     <li>Poseer una cedula de identidad valida.</li>
   </ul>
 
-  <h2>4. Cuenta de usuario</h2>
+  <h2>6. Cuenta de usuario</h2>
   <p>Al registrarte en SISTEPARD, creas una cuenta personal e intransferible. Eres responsable de:</p>
   <ul>
     <li>Mantener la confidencialidad de tus credenciales (cedula y PIN).</li>
@@ -89,7 +112,7 @@ a{text-decoration:none;color:inherit}
   </ul>
   <p>SISTEPARD no se hace responsable por danos derivados del uso no autorizado de tu cuenta por terceros.</p>
 
-  <h2>5. Uso aceptable</h2>
+  <h2>7. Uso aceptable</h2>
   <p>Al utilizar la plataforma, te comprometes a:</p>
   <ul>
     <li>Utilizarla exclusivamente para fines legales y dentro del marco democratico.</li>
@@ -97,35 +120,56 @@ a{text-decoration:none;color:inherit}
     <li>No participar en fraude electoral, soborno o cualquier conducta que comprometa la integridad del proceso.</li>
     <li>No intentar acceder a datos de otros usuarios sin autorizacion.</li>
     <li>No utilizar la plataforma para fines distintos a los establecidos por SISTEPARD.</li>
+    <li>No intentar evadir las measures de seguridad de la plataforma.</li>
   </ul>
   <p>El incumplimiento de estas condiciones podra resultar en la suspension o eliminacion definitiva de tu cuenta.</p>
 
-  <h2>6. Propiedad intelectual</h2>
-  <p>SISTEPARD posee todos los derechos de propiedad intelectual sobre la plataforma, incluyendo pero no limitandose a: codigo fuente, diseno, interfaz, logos, textos, graficos y documentacion. Queda prohibida la reproduccion, distribucion, modificacion o ingenieria inversa de cualquier componente sin autorizacion expresa y por escrito de SISTEPARD.</p>
+  <h2>8. Proteccion de datos</h2>
+  <p>Tu informacion personal es protegida conforme a nuestra <a href="privacidad.html" style="color:var(--accent)">Politica de Privacidad</a> y la <strong>Ley No. 172-13 sobre Proteccion de Datos de Caracter Personal</strong>. Para detalles sobre el uso de cookies y almacenamiento local, consulta nuestra <a href="cookies.html" style="color:var(--accent)">Politica de Cookies</a>.</p>
 
-  <h2>7. Limitacion de responsabilidad</h2>
-  <p>SISTEPARD se proporciona "tal cual" y "segun disponibilidad". Aunque nos esforzamos por garantizar la disponibilidad y seguridad del servicio:</p>
+  <h2>9. Propiedad intelectual</h2>
+  <p>El codigo fuente de SISTEPARD esta sujeto a la <strong>Licencia MIT</strong> (vease seccion 2). El diseno de la interfaz, los textos, graficos y documentacion estan protegidos por las leyes de propiedad intelectual de Republica Dominicana.</p>
+  <p>Los datos introducidos por los usuarios (padron de militantes, actas, fotografias) son propiedad exclusiva del partido politico que los introduce. SISTEPARD no reclama propiedad sobre estos datos.</p>
+
+  <h2>10. Limitacion de responsabilidad</h2>
+  <p>SISTEPARD se proporciona "tal cual" y "segun disponibilidad", conforme a la Licencia MIT. Aunque nos esforzamos por garantizar la disponibilidad y seguridad del servicio:</p>
   <ul>
     <li>No garantizamos que el servicio estara disponible de forma ininterrumpida o libre de errores.</li>
     <li>No somos responsables por perdidas, danos o decisiones tomadas en base a la informacion de la plataforma.</li>
     <li>No asumimos responsabilidad por interrupciones derivadas de fallas tecnicas, mantenimiento o causas de fuerza mayor.</li>
   </ul>
 
-  <h2>8. Terminacion de cuenta</h2>
+  <h2>11. Uso por cuenta de terceros</h2>
+  <p>SISTEPARD es una herramienta disenada para ser implementada por partidos politicos. Cuando un partido politico utiliza SISTEPARD:</p>
+  <ul>
+    <li>El partido es el responsable del tratamiento de los datos de sus miembros.</li>
+    <li>SISTEPARD actua como proporcionador de infraestructura tecnologica.</li>
+    <li>El partido debe contar con las propias politicas de privacidad y consentimiento de sus miembros.</li>
+    <li>Los datos de un partido nunca son accesibles por otro partido o entidad externa.</li>
+  </ul>
+
+  <h2>12. Terminacion de cuenta</h2>
   <p>SISTEPARD se reserva el derecho de suspender o eliminar tu cuenta en los siguientes casos:</p>
   <ul>
     <li>Incumplimiento de estos Terminos y Condiciones.</li>
     <li>Conducta que comprometa la integridad del proceso electoral.</li>
-    <li>Solicitud de eliminacion por parte del usuario.</li>
+    <li>Solicitud de eliminacion por parte del usuario o del administrador del partido.</li>
   </ul>
   <p>Al eliminar tu cuenta, tus datos personales seran removidos de conformidad con nuestra Politica de Privacidad.</p>
 
-  <h2>9. Ley aplicable</h2>
+  <h2>13. Ley aplicable y jurisdiccion</h2>
   <p>Estos Terminos y Condiciones se rigen por las leyes de la <strong>Republica Dominicana</strong>. Cualquier controversia derivada del uso de la plataforma sera sometida a la jurisdiccion de los tribunales competentes de la Republica Dominicana.</p>
 
-  <h2>10. Contacto</h2>
+  <h2>14. Cambios en estos terminos</h2>
+  <p>SISTEPARD se reserva el derecho de actualizar estos Terminos y Condiciones en cualquier momento. Los cambios seran publicados en esta pagina con la fecha de la ultima revision. Te recomendamos revisar periodicamente este documento.</p>
+
+  <h2>15. Contacto</h2>
   <p>Si tienes preguntas, solicitudes o inquietudes sobre estos Terminos y Condiciones, puedes contactarnos a traves de:</p>
-  <p><strong>Email:</strong> <a href="mailto:josealfred208@gmail.com" style="color:var(--accent)">josealfred208@gmail.com</a></p>
+  <p><strong>Email:</strong> <a href="mailto:info@partidoprueba.do" style="color:var(--accent)" class="legal-var-link" data-key="responsableEmail">info@partidoprueba.do</a></p>
+
+  <div style="background:rgba(79,125,245,.06);border:1px solid rgba(79,125,245,.15);border-radius:12px;padding:20px;margin-top:40px">
+    <p style="font-size:13px;color:var(--muted);margin:0"><strong>Disclaimer:</strong> Este documento ha sido generado como modelo base conforme a la Ley No. 172-13 sobre Proteccion de Datos de Caracter Personal y la Ley No. 53-07 sobre Crimenes y Delitos de Alta Tecnologia de Republica Dominicana. Se recomienda que sea revisado por un abogado colegiado antes de su publicacion formal.</p>
+  </div>
 
   <a href="index.html" class="back-link">
     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
@@ -145,11 +189,25 @@ a{text-decoration:none;color:inherit}
     <p>&copy; 2026 SISTEPARD. Todos los derechos reservados.</p>
     <div class="footer-links">
       <a href="privacidad.html">Politica de Privacidad</a>
+      <a href="cookies.html">Politica de Cookies</a>
       <a href="terminos.html">Terminos y Condiciones</a>
       <a href="index.html">Inicio</a>
     </div>
   </div>
 </footer>
+
+<script src="js/config_loader.js"></script>
+<script>
+(function(){
+  if(!window.configLoader) return;
+  var c = window.configLoader.get();
+  if(!c || !c.legal) return;
+  document.querySelectorAll('.legal-var-link').forEach(function(el){
+    var val = c.legal[el.dataset.key];
+    if(val){ el.textContent = val; el.href = 'mailto:' + val; }
+  });
+})();
+</script>
 
 </body>
 </html>

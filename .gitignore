@@ -72,6 +72,9 @@ login.html
 !verificar-acta.html
 !importador_padron.html
 !captura_zonas.html
+!privacidad.html
+!terminos.html
+!cookies.html
 
 # ═══ Datos de padrón (datos personales — NUNCA al repo) ═══
 padron_*.json

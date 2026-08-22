@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Politica de Cookies de SISTEPARD — Sistema Electoral de Partidos RD. Conoce como utilizamos el almacenamiento local.">
+<title>Politica de Cookies — SISTEPARD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--primary:#0a1128;--accent:#4f7df5;--accent-2:#a78bfa;--gold:#f5a623;--bg:#e9ecf3;--surface:#fff;--surface-2:#dde2ed;--text:#0a1128;--muted:#4a5568;--border:rgba(0,30,80,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.header{background:linear-gradient(135deg,#0a1128,#1a365d);padding:80px 0 64px;color:#fff;text-align:center}
+.header-inner{max-width:720px;margin:0 auto;padding:0 24px}
+.header-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:rgba(79,125,245,.15);border:1px solid rgba(79,125,245,.3);margin-bottom:24px}
+.header-badge span{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.header h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.header p{font-size:16px;color:rgba(255,255,255,.5);max-width:480px;margin:0 auto}
+.header-date{margin-top:16px;font-size:13px;color:rgba(255,255,255,.35)}
+.content{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+.content h2{font-size:22px;font-weight:700;margin:48px 0 16px;color:var(--primary)}
+.content h2:first-child{margin-top:0}
+.content p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.content ul{margin:0 0 16px 20px;color:var(--muted);font-size:15px;line-height:1.8}
+.content ul li{margin-bottom:6px}
+.content strong{color:var(--text);font-weight:600}
+.content .legal-ref{display:inline-block;background:rgba(79,125,245,.08);border:1px solid rgba(79,125,245,.15);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:600;color:var(--accent);margin-left:4px}
+.cookie-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:14px}
+.cookie-table th{text-align:left;padding:10px 12px;background:var(--surface-2);color:var(--text);font-weight:600;border-bottom:2px solid var(--border)}
+.cookie-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top}
+.cookie-table td:first-child{font-family:monospace;font-size:13px;color:var(--text);white-space:nowrap}
+.cookie-table td:last-child{font-size:13px}
+.back-link{display:inline-flex;align-items:center;gap:8px;margin-top:40px;padding:12px 24px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:13px;font-weight:600;transition:all .3s}
+.back-link:hover{box-shadow:0 4px 16px rgba(79,125,245,.3);transform:translateY(-1px)}
+.back-link svg{width:16px;height:16px}
+.footer{background:var(--primary);color:#fff;padding:40px 0 24px;margin-top:80px}
+.footer-inner{max-width:720px;margin:0 auto;padding:0 24px;text-align:center}
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px}
+.footer-brand-icon{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center}
+.footer-brand-icon svg{width:18px;height:18px;color:#fff}
+.footer-brand span{font-weight:700;font-size:14px}
+.footer p{font-size:13px;color:rgba(255,255,255,.4)}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-top:16px}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.35);transition:color .3s}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+@media(max-width:768px){
+.header{padding:64px 0 48px}
+.content{padding:32px 20px 64px}
+.cookie-table{font-size:12px}
+.cookie-table th,.cookie-table td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-badge"><span>Cookies</span></div>
+    <h1>Politica de Cookies</h1>
+    <p>Conoce como SISTEPARD utiliza el almacenamiento local del navegador.</p>
+    <div class="header-date">Ultima actualizacion: 21 de agosto de 2026</div>
+  </div>
+</header>
+
+<main class="content">
+
+  <h2>1. Que es localStorage</h2>
+  <p>SISTEPARD utiliza <strong>localStorage</strong> (almacenamiento local del navegador) en lugar de cookies tradicionales. localStorage es una API del navegador que permite guardar pares de clave-valor en tu dispositivo de forma persistente.</p>
+  <p>A diferencia de las cookies, los datos en localStorage <strong>no se envian automaticamente al servidor</strong> con cada peticion HTTP. Solo el navegador accede a estos datos y unicamente dentro del mismo dominio.</p>
+
+  <h2>2. Tipos de almacenamiento que utilizamos
+    <span class="legal-ref">Solo esenciales</span>
+  </h2>
+  <p>SISTEPARD <strong>no utiliza cookies de rastreo publicitario</strong>. Todo el almacenamiento es exclusivamente funcional y esencial para el funcionamiento del sistema.</p>
+
+  <table class="cookie-table">
+    <thead>
+      <tr><th>Clave</th><th>Purpose</th><th>Duración</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>[id]_sesion</td>
+        <td>Informacion de sesion del usuario (cedula, nombre, rol, token JWT, expiracion). Permanece la sesion activa.</td>
+        <td>24 horas</td>
+      </tr>
+      <tr>
+        <td>[id]_admin</td>
+        <td>Flag de autenticacion para el panel de administracion.</td>
+        <td>Sesion</td>
+      </tr>
+      <tr>
+        <td>[id]_admin_token</td>
+        <td>Token de autenticacion del administrador para llamadas API.</td>
+        <td>Sesion</td>
+      </tr>
+      <tr>
+        <td>[id]_admin_pin</td>
+        <td>PIN de acceso del administrador (cifrado localmente).</td>
+        <td>Persistente</td>
+      </tr>
+      <tr>
+        <td>[id]_planchas</td>
+        <td>Datos de planchas de candidatos guardados localmente durante la captura de actas.</td>
+        <td>Persistente</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:13px;color:var(--muted);margin-top:-8px"><em>[id] se refiere al identificador del cliente/partido configurado en config.json (ej: "prm", "test-party").</em></p>
+
+  <h2>3. Datos de sesion
+    <span class="legal-ref">Esencial</span>
+  </h2>
+  <p>La clave <strong>[id]_sesion</strong> almacena la siguiente informacion:</p>
+  <ul>
+    <li><strong>Cedula</strong> — numero de identificacion del usuario.</li>
+    <li><strong>Nombre</strong> — nombre completo del usuario.</li>
+    <li><strong>Zona y Municipio</strong> — ubicacion politica dentro de la estructura.</li>
+    <li><strong>Rol</strong> — nivel de permisos dentro de la plataforma.</li>
+    <li><strong>Token JWT</strong> — credencial de autenticacion para la API.</li>
+    <li><strong>Expiracion</strong> — timestamp de caducidad de la sesion (24 horas).</li>
+  </ul>
+  <p>Este almacenamiento es <strong>estrictamente necesario</strong> para que la plataforma funcione. Sin el, el usuario tendria que autenticarse en cada pagina.</p>
+
+  <h2>4. Datos de administracion
+    <span class="legal-ref">Esencial</span>
+  </h2>
+  <p>Las claves <strong>[id]_admin</strong>, <strong>[id]_admin_token</strong> y <strong>[id]_admin_pin</strong> son utilizadas exclusivamente para el panel de administracion y permiten:</p>
+  <ul>
+    <li>Mantener la sesion de administrador activa.</li>
+    <li>Realizar llamadas API autenticadas.</li>
+    <li>Recordar el PIN de acceso para evitar reingresos frecuentes.</li>
+  </ul>
+
+  <h2>5. Datos de planchas
+    <span class="legal-ref">Esencial</span>
+  </h2>
+  <p>La clave <strong>[id]_planchas</strong> almacena las planchas de candidatos capturadas durante el proceso de creacion de actas. Estos datos se guardan localmente para:</p>
+  <ul>
+    <li>Permitir la edicion sin conexion (offline).</li>
+    <li>Evitar perdida de informacion durante el proceso de captura.</li>
+    <li>Sincronizar con la base de datos cuando se envia el acta.</li>
+  </ul>
+
+  <h2>6. Datos que NO almacenamos</h2>
+  <ul>
+    <li><strong>No utilizamos cookies de analitica</strong> (Google Analytics, Facebook Pixel, etc.).</li>
+    <li><strong>No utilizamos cookies de publicidad</strong> ni de rastreo entre sitios.</li>
+    <li><strong>No compartimos datos de navegacion</strong> con terceros.</li>
+    <li><strong>No utilizamos cookies de redes sociales</strong> (widgets de Facebook, Twitter, etc.).</li>
+  </ul>
+
+  <h2>7. Como eliminar el almacenamiento</h2>
+  <p>Puedes eliminar manualmente el almacenamiento de SISTEPARD desde tu navegador:</p>
+  <ul>
+    <li><strong>Chrome:</strong> F12 > Application > Storage > Local Storage > seleccionar el dominio > click derecho > Clear.</li>
+    <li><strong>Firefox:</strong> F12 > Storage > Local Storage > seleccionar el dominio > click derecho > Delete All.</li>
+    <li><strong>Safari:</strong> Develop > Local Storage > seleccionar el dominio > Delete.</li>
+  </ul>
+  <p>Tambien puedes cerrar sesion desde la plataforma, lo cual eliminara automaticamente la clave de sesion y los tokens de autenticacion.</p>
+
+  <h2>8. Cambios en esta politica</h2>
+  <p>SISTEPARD se reserva el derecho de actualizar esta Politica de Cookies en cualquier momento. Los cambios seran publicados en esta pagina con la fecha de la ultima revision.</p>
+
+  <h2>9. Contacto</h2>
+  <p>Si tienes preguntas sobre esta Politica de Cookies, puedes contactarnos a traves de:</p>
+  <p><strong>Email:</strong> <a href="mailto:info@partidoprueba.do" style="color:var(--accent)" class="legal-var-link" data-key="responsableEmail">info@partidoprueba.do</a></p>
+
+  <div style="background:rgba(79,125,245,.06);border:1px solid rgba(79,125,245,.15);border-radius:12px;padding:20px;margin-top:40px">
+    <p style="font-size:13px;color:var(--muted);margin:0"><strong>Disclaimer:</strong> Este documento ha sido generado como modelo base conforme a la Ley No. 172-13 sobre Proteccion de Datos de Caracter Personal y la Ley No. 53-07 sobre Crimenes y Delitos de Alta Tecnologia de Republica Dominicana. Se recomienda que sea revisado por un abogado colegiado antes de su publicacion formal.</p>
+  </div>
+
+  <a href="index.html" class="back-link">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+    Volver al inicio
+  </a>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <span>SISTEPARD</span>
+    </div>
+    <p>&copy; 2026 SISTEPARD. Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="privacidad.html">Politica de Privacidad</a>
+      <a href="cookies.html">Politica de Cookies</a>
+      <a href="terminos.html">Terminos y Condiciones</a>
+      <a href="index.html">Inicio</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config_loader.js"></script>
+<script>
+(function(){
+  if(!window.configLoader) return;
+  var c = window.configLoader.get();
+  if(!c || !c.legal) return;
+  document.querySelectorAll('.legal-var-link').forEach(function(el){
+    var val = c.legal[el.dataset.key];
+    if(val){ el.textContent = val; el.href = 'mailto:' + val; }
+  });
+})();
+</script>
+
+</body>
+</html>
