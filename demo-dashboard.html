@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SISTEPARD · Dashboard Demo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', system-ui, sans-serif; background: #000; }
+
+  .hero-gradient {
+    background: linear-gradient(180deg, #ffffff 25%, rgba(255,255,255,.55) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dash-glow {
+    background: radial-gradient(ellipse 55% 42% at 50% 0%, rgba(255,150,60,.32), rgba(255,110,60,.10) 55%, transparent 75%);
+    filter: blur(6px);
+  }
+
+  .kpi-card { transition: border-color .3s ease, transform .3s ease; }
+  .kpi-card:hover { border-color: #3f3f46; transform: translateY(-3px); }
+
+  .nav-link { color: #a1a1aa; transition: color .2s ease; }
+  .nav-link:hover { color: #fff; }
+
+  .side-item { color: #9ca3af; transition: background .2s ease, color .2s ease; }
+  .side-item:hover { color: #e5e7eb; background: rgba(255,255,255,.05); }
+  .side-item.active { color: #fff; background: rgba(255,255,255,.09); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body class="text-zinc-100 antialiased">
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-900">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-2.5">
+      <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-fuchsia-500 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+        <i class="fa-solid fa-check text-black text-sm"></i>
+      </span>
+      <span class="font-extrabold text-lg tracking-tight">SISTEPARD</span>
+    </div>
+    <div class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#" class="nav-link">Producto</a>
+      <a href="#" class="nav-link">Módulos</a>
+      <a href="#" class="nav-link">Precios</a>
+      <a href="#" class="nav-link">Documentación</a>
+    </div>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="#" class="nav-link hidden sm:block">Iniciar sesión</a>
+      <a href="#" class="px-4 py-2 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-colors">Solicitar demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="pt-36 pb-14 px-5 text-center">
+  <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-950 text-sm mb-8">
+    <span class="font-semibold text-white">Elecciones internas 2026</span>
+    <span class="text-zinc-500">Valverde en línea</span>
+    <i class="fa-solid fa-arrow-right text-zinc-500 text-xs"></i>
+  </div>
+  <h1 class="hero-gradient text-4xl sm:text-6xl font-bold tracking-tight leading-[1.08] max-w-3xl mx-auto">
+    Tu estructura electoral,<br>medida en tiempo real
+  </h1>
+  <p class="mt-6 text-zinc-500 text-base sm:text-lg max-w-xl mx-auto">
+    Padrón, planchas, cuotas estatutarias y cobertura territorial —
+    todo lo que pasa en tu provincia, en un solo panel.
+  </p>
+  <a href="#panel" class="inline-block mt-8 px-7 py-3 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-colors">
+    Ver el panel
+  </a>
+</header>
+
+<!-- ═══════════ DASHBOARD ═══════════ -->
+<section id="panel" class="relative px-3 sm:px-6 pb-24 max-w-6xl mx-auto">
+  <div class="dash-glow absolute -top-10 inset-x-0 h-72 pointer-events-none"></div>
+
+  <div class="relative rounded-2xl border border-zinc-800 bg-[#050505] overflow-hidden shadow-2xl shadow-orange-500/5">
+
+    <div class="flex min-h-[620px]">
+
+      <!-- ── SIDEBAR ── -->
+      <aside class="hidden lg:flex flex-col w-56 shrink-0 border-r border-zinc-900 p-4 gap-1">
+        <div class="flex items-center gap-2.5 px-3 py-4 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-400 to-fuchsia-500 flex items-center justify-center">
+            <i class="fa-solid fa-check text-black text-xs"></i>
+          </span>
+          <span class="font-bold text-[15px]">CRM Electoral</span>
+        </div>
+        <a href="#" class="side-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium">
+          <i class="fa-solid fa-chart-line w-4"></i> Dashboard
+        </a>
+        <a href="#" class="side-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+          <i class="fa-solid fa-users w-4"></i> Militantes
+        </a>
+        <a href="#" class="side-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+          <i class="fa-solid fa-list-ol w-4"></i> Planchas
+        </a>
+        <a href="#" class="side-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+          <i class="fa-solid fa-map-location-dot w-4"></i> Geografía
+        </a>
+        <a href="#" class="side-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm">
+          <i class="fa-solid fa-file-signature w-4"></i> Actas
+        </a>
+        <a href="#" class="side-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm mt-auto">
+          <i class="fa-solid fa-gear w-4"></i> Configuración
+        </a>
+      </aside>
+
+      <!-- ── CONTENIDO ── -->
+      <main class="flex-1 p-5 sm:p-6">
+
+        <!-- Encabezado -->
+        <div class="flex flex-wrap items-center gap-4 justify-between mb-6">
+          <div>
+            <h2 class="text-xl font-bold">Dashboard</h2>
+            <p class="text-zinc-500 text-sm mt-0.5">Bienvenido de nuevo, Josh. Esto es lo que pasa hoy en Valverde.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <label class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-lg border border-zinc-800 bg-zinc-950 text-zinc-500 text-sm w-56">
+              <i class="fa-solid fa-magnifying-glass text-xs"></i> Buscar...
+            </label>
+            <button class="relative w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-950 text-zinc-400 hover:text-white transition-colors">
+              <i class="fa-regular fa-bell"></i>
+              <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-5">
+          <div class="kpi-card rounded-xl border border-zinc-800/80 bg-zinc-950 p-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-zinc-500 text-[13px]">Militantes en padrón</p>
+                <p class="text-[26px] font-bold mt-1 tracking-tight"><span class="count" data-target="4571">0</span></p>
+                <p class="text-emerald-400 text-xs mt-1.5 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+12% vs mes anterior</p>
+              </div>
+              <span class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center"><i class="fa-solid fa-users text-sm"></i></span>
+            </div>
+          </div>
+
+          <div class="kpi-card rounded-xl border border-zinc-800/80 bg-zinc-950 p-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-zinc-500 text-[13px]">Planchas inscritas</p>
+                <p class="text-[26px] font-bold mt-1 tracking-tight"><span class="count" data-target="23">0</span></p>
+                <p class="text-emerald-400 text-xs mt-1.5 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+8% esta semana</p>
+              </div>
+              <span class="w-9 h-9 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center"><i class="fa-solid fa-list-ol text-sm"></i></span>
+            </div>
+          </div>
+
+          <div class="kpi-card rounded-xl border border-zinc-800/80 bg-zinc-950 p-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-zinc-500 text-[13px]">Cuota de género</p>
+                <p class="text-[26px] font-bold mt-1 tracking-tight"><span class="count" data-target="46.8" data-decimals="1">0</span>%</p>
+                <p class="text-emerald-400 text-xs mt-1.5 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+2.1 pts · meta 40–60%</p>
+              </div>
+              <span class="w-9 h-9 rounded-lg bg-fuchsia-500/10 text-fuchsia-400 flex items-center justify-center"><i class="fa-solid fa-venus-mars text-sm"></i></span>
+            </div>
+          </div>
+
+          <div class="kpi-card rounded-xl border border-zinc-800/80 bg-zinc-950 p-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-zinc-500 text-[13px]">Cobertura de recintos</p>
+                <p class="text-[26px] font-bold mt-1 tracking-tight"><span class="count" data-target="71">0</span>%</p>
+                <p class="text-red-400 text-xs mt-1.5 font-medium"><i class="fa-solid fa-arrow-trend-down mr-1"></i>−3 pts · faltan 4 recintos</p>
+              </div>
+              <span class="w-9 h-9 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center"><i class="fa-solid fa-map-location-dot text-sm"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+
+          <!-- Línea: crecimiento -->
+          <div class="lg:col-span-3 rounded-xl border border-zinc-800/80 bg-zinc-950 p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold text-[15px]">Militantes registrados</h3>
+              <button class="flex items-center gap-2 px-3 py-1.5 rounded-md border border-zinc-800 text-xs text-zinc-400 hover:text-white transition-colors">
+                Últimos 6 meses <i class="fa-solid fa-chevron-down text-[9px]"></i>
+              </button>
+            </div>
+            <svg viewBox="0 0 560 240" class="w-full h-auto" role="img" aria-label="Gráfico de militantes registrados por mes">
+              <defs>
+                <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity=".14"/>
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g stroke="#27272a" stroke-width="1">
+                <line x1="46" y1="155" x2="540" y2="155"/>
+                <line x1="46" y1="110" x2="540" y2="110"/>
+                <line x1="46" y1="65"  x2="540" y2="65"/>
+                <line x1="46" y1="20"  x2="540" y2="20"/>
+              </g>
+              <g fill="#52525b" font-size="10" text-anchor="end">
+                <text x="40" y="158">300</text><text x="40" y="113">600</text>
+                <text x="40" y="68">900</text><text x="40" y="23">1,200</text>
+              </g>
+              <path d="M55,122 L148,108.5 L241,86 L334,95 L427,62 L520,27.5 L520,200 L55,200 Z" fill="url(#areaFill)"/>
+              <polyline points="55,122 148,108.5 241,86 334,95 427,62 520,27.5" fill="none" stroke="#fafafa" stroke-width="2"/>
+              <g fill="#fafafa">
+                <circle cx="55" cy="122" r="3.5"/><circle cx="148" cy="108.5" r="3.5"/>
+                <circle cx="241" cy="86" r="3.5"/><circle cx="334" cy="95" r="3.5"/>
+                <circle cx="427" cy="62" r="3.5"/><circle cx="520" cy="27.5" r="3.5"/>
+              </g>
+              <g fill="#52525b" font-size="10" text-anchor="middle">
+                <text x="55" y="226">Mar</text><text x="148" y="226">Abr</text><text x="241" y="226">May</text>
+                <text x="334" y="226">Jun</text><text x="427" y="226">Jul</text><text x="520" y="226">Ago</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Donut: estatus planchas -->
+          <div class="lg:col-span-2 rounded-xl border border-zinc-800/80 bg-zinc-950 p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-semibold text-[15px]">Estatus de planchas</h3>
+              <a href="#" class="text-xs text-zinc-500 hover:text-white transition-colors">Ver todo</a>
+            </div>
+            <div class="flex items-center gap-5">
+              <svg viewBox="0 0 180 180" class="w-36 h-36 shrink-0" role="img" aria-label="Distribución de planchas por estatus">
+                <circle cx="90" cy="90" r="64" fill="none" stroke="#18181b" stroke-width="26"/>
+                <circle cx="90" cy="90" r="64" fill="none" stroke="#22c55e" stroke-width="26"
+                        stroke-dasharray="181 402.12" transform="rotate(-90 90 90)"/>
+                <circle cx="90" cy="90" r="64" fill="none" stroke="#f59e0b" stroke-width="26"
+                        stroke-dasharray="120.6 402.12" transform="rotate(72 90 90)"/>
+                <circle cx="90" cy="90" r="64" fill="none" stroke="#3b82f6" stroke-width="26"
+                        stroke-dasharray="60.3 402.12" transform="rotate(180 90 90)"/>
+                <circle cx="90" cy="90" r="64" fill="none" stroke="#ef4444" stroke-width="26"
+                        stroke-dasharray="40.2 402.12" transform="rotate(234 90 90)"/>
+                <text x="90" y="87" text-anchor="middle" fill="#fafafa" font-size="26" font-weight="700">23</text>
+                <text x="90" y="106" text-anchor="middle" fill="#71717a" font-size="11">planchas</text>
+              </svg>
+              <ul class="text-[13px] space-y-2.5 min-w-0">
+                <li class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>Validada <span class="text-zinc-500 ml-auto pl-2">45%</span></li>
+                <li class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>Pendiente <span class="text-zinc-500 ml-auto pl-2">30%</span></li>
+                <li class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span>Borrador <span class="text-zinc-500 ml-auto pl-2">15%</span></li>
+                <li class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0"></span>Rechazada <span class="text-zinc-500 ml-auto pl-2">10%</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Count-up animado de los KPIs (desactivado si el usuario reduce movimiento)
+  (function () {
+    var els = document.querySelectorAll('.count');
+    if (!els.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach(function (el) { el.textContent = fmt(el.dataset.target, el.dataset.decimals); });
+      return;
+    }
+    els.forEach(function (el) {
+      var target = parseFloat(el.dataset.target);
+      var dec = parseInt(el.dataset.decimals || '0', 10);
+      var t0 = null, DUR = 950;
+      function step(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / DUR, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(target * eased, dec);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+    function fmt(v, dec) {
+      return v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    }
+  })();
+</script>
+
+</body>
+</html>
